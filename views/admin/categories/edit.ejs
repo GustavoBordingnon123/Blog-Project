@@ -1,0 +1,21 @@
+<%- include ("../../partials/header.ejs") %>
+<%- include ("../../partials/navbar.ejs") %>
+<body>
+    <hr>
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <h2>Category edit</h1>
+            </div> 
+            <div class="card-body">
+                <form method="post" action="/categories/update">
+                    <input class="form-control" type="text" name="title" placeholder="Definy the category title" value="<%= category.title %>">
+                    <input type="hidden" name="id" value="<%= category.id %>">
+                    <br>
+                    <button class="btn btn-success">Save</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<%- include ("../../partials/footer.ejs") %>

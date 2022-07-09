@@ -1,0 +1,43 @@
+<%- include ("partials/header.ejs") %>
+<%- include ("partials/homenavbar.ejs") %>
+<body>
+    <hr>
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="display-4">Welcome to the blog project</h1>
+            <p class="lead">This is a project to study node, in a try to sumulate an blog</p>
+            <hr class="my-4">
+            <p>made by Gustavo Bordignon</p>
+            <p class="lead">
+            <a class="btn btn-primary btn-lg" href="https://www.linkedin.com/in/gustavo-bordignon-326861203/" role="button">My contact</a>
+            </p>
+        </div>
+        <br>
+        <% articles.forEach(article => { %>
+            <br>
+            <div class="card">
+                <div class="card-header">
+                    <h3><%= article.title %></h3>
+                </div>
+                <div class="card-body">
+                    <a href="<%= article.slug %>" class="btn btn-success">Read</a>
+                </div>
+            </div>
+        <% }) %>
+        <br>
+        <div class="row">
+            <div class="col col-12">
+                <a style="float:right" href="/articles/page/2">Next >>></a>
+            </div>
+
+        </div>
+    </div>
+    <hr>
+   
+
+
+
+
+</body>
+
+<%- include ("partials/footer.ejs") %>
